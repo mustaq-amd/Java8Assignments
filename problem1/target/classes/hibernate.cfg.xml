@@ -1,0 +1,18 @@
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.url">jdbc:sqlserver://localhost;databaseName=impact;instanceName=SQLEXPRESSCUSTOM</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password">root</property>
+		<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<!--  'show_sql' set true to check sql statements on console else set to 
+			false  -->
+		<!--  <property name="show_sql">true</property> <property name="format_sql">true</property>  -->
+		<!--  use 'create' to Create tables on application startup else use 'update'  -->
+		<property name="hbm2ddl.auto">update</property>
+		<!--  JDBC connection pool  -->
+		<!--  <property name="connection.pool_size">5</property> <property name="current_session_context_class">thread</property>  -->
+		<!--  Domain Model classes to be mapped  -->
+		<mapping class="com.citiustech.entity.Movie" />
+	</session-factory>
+</hibernate-configuration>
